@@ -1,0 +1,107 @@
+<Vent_Inicio>:
+    FloatLayout:
+
+        Image:
+            source: "wallpaper.png"
+            allow_stretch: True
+            keep_ratio: False
+            size: self.parent.size
+            pos: self.parent.pos
+
+        Label:
+            size_hint: .5, .1
+            pos_hint: {"center_x": .5, "center_y": .9}
+            text: "BIENVENIDO"
+            font_size: self.height * 0.8
+
+        Button:
+            size_hint: .20, .09
+            pos_hint: {"center_x": .5, "center_y": .6}
+            text: "INICIAR SESION"
+            on_release: root.logeo()
+
+<Login>:
+
+    FloatLayout:
+
+        Image:
+            source: "wallpaper.png"
+            allow_stretch: True
+            keep_ratio: False
+            size: self.parent.size
+            pos: self.parent.pos
+
+        Label:
+            size_hint: .5, .1
+            pos_hint: {"center_x": .5, "center_y": .9}
+            text: "BIENVENIDO"
+            font_size: self.height * 0.8
+
+        TextInput:
+            id: usuario
+            size_hint: .3, .05
+            pos_hint: {"center_x": .5, "center_y": .6}
+            hint_text: "USUARIO"
+
+        TextInput:
+            id: contrasena
+            size_hint: .3, .05
+            pos_hint: {"center_x": .5, "center_y": .4}
+            hint_text: "CONTRASEÑA"
+            password: True
+
+        Button:
+            size_hint: .1, .09
+            pos_hint: {"center_x": .5, "center_y": .1}
+            text: "LOGIN"
+            on_release: root.Val_Usuario()
+
+<MainScreenAdmin>:
+
+    FloatLayout:
+
+        Image:
+            source: "wallpaper.png"
+            allow_stretch: True
+            keep_ratio: False
+            size: self.parent.size
+            pos: self.parent.pos
+
+        Label:
+            text: "Bienvenido al sistema Admin"
+            font_size: 40
+            pos_hint: {"center_x": .5, "center_y": .9}
+
+        Button:
+            size_hint: .1, .09
+            pos_hint: {"center_x": .5, "center_y": .1}
+            text: "Cerrar Sesion"
+            on_release: root.cerrar_ses()
+
+        Button:
+            size_hint: .1, .09
+            pos_hint: {"center_x": .5, "center_y": .21}
+            text: "Agregar Usuario"
+            #on_release: root.cerrar_ses()
+
+<MainScreenUsuario>:
+
+    FloatLayout:
+
+        Image:
+            source: "wallpaper.png"
+            allow_stretch: True
+            keep_ratio: False
+            size: self.parent.size
+            pos: self.parent.pos
+
+        Label:
+            text: "Bienvenido al sistema"
+            font_size: 40
+            pos_hint: {"center_x": .5, "center_y": .9}
+
+        Button:
+            size_hint: .1, .09
+            pos_hint: {"center_x": .5, "center_y": .1}
+            text: "Cerrar Sesion"
+            on_release: root.cerrar_ses()
